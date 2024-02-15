@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import noteContext from "../context/notes/noteContext";
 import { FaArrowLeft } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const AddNote = (props) => {
   const context = useContext(noteContext);
@@ -24,6 +25,37 @@ const AddNote = (props) => {
       className="container my-3 ct"
       style={{ maxWidth: "540px", height: "68vh" }}
     >
+      <Helmet>
+        <title>Add Notes: iNoteBook</title>
+        <meta charSet="UTF-8" />
+        <meta
+          name="description"
+          content="Add new notes with iNoteBook - Your Secure Cloud Note-Taking App. Easily organize, edit, and delete notes with just a few clicks. Enjoy secure and convenient note-taking."
+        />
+        <meta
+          name="keywords"
+          content="iNoteBook, add notes, secure note-taking, cloud app, React, Bootstrap, CSS"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Your Name" />
+        <meta name="og:title" content="Add Notes: iNoteBook" />
+        <meta
+          name="og:description"
+          content="Add new notes with iNoteBook - Your Secure Cloud Note-Taking App. Easily organize, edit, and delete notes with just a few clicks. Enjoy secure and convenient note-taking."
+        />
+        <meta name="og:type" content="website" />
+        <meta
+          name="og:url"
+          content="https://cloudinotebook.netlify.app/addnotes"
+        />
+        <meta name="og:image" content="url_to_your_logo_or_banner_image" />
+        <link
+          rel="canonical"
+          href="https://cloudinotebook.netlify.app/addnotes"
+        />
+      </Helmet>
+
       <div className="backHome mb-3">
         <NavLink
           to="/"
@@ -57,7 +89,7 @@ const AddNote = (props) => {
             className="form-control widthS impB"
             id="title"
             name="title"
-            placeholder="Title *"
+            placeholder="Title *(min length is 3)"
             aria-describedby="emailHelp"
             value={note.title}
             style={{

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import { NavLink } from "react-router-dom";
-
+import logo from "./Imgs/signupImg.png";
+import { Helmet } from "react-helmet";
 const Signup = (props) => {
   const [credentials, setCredentials] = useState({
     name: "",
@@ -17,7 +18,7 @@ const Signup = (props) => {
     const { name, email, password } = credentials;
     try {
       const response = await fetch(
-        "https://inotebookbackend-6med.onrender.com/api/auth/createuser",
+        "http://localhost:5000/api/auth/createuser",
         {
           method: "POST",
           headers: {
@@ -77,6 +78,37 @@ const Signup = (props) => {
         backgroundColor: props.mode === "light" ? "white" : "#000000",
       }}
     >
+      <Helmet>
+        <title>Sign Up: iNoteBook</title>
+        <meta charSet="UTF-8" />
+        <meta
+          name="description"
+          content="Sign up for iNoteBook - Your Secure Cloud Note-Taking App. Create an account to access powerful note-taking features and organize your notes securely. Join iNoteBook today!"
+        />
+        <meta
+          name="keywords"
+          content="iNoteBook, sign up, create account, secure notes, note-taking, React, Bootstrap, CSS"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Your Name" />
+        <meta name="og:title" content="Sign Up for iNoteBook" />
+        <meta
+          name="og:description"
+          content="Sign up for iNoteBook - Your Secure Cloud Note-Taking App. Create an account to access powerful note-taking features and organize your notes securely. Join iNoteBook today!"
+        />
+        <meta name="og:type" content="website" />
+        <meta
+          name="og:url"
+          content="https://cloudinotebook.netlify.app/signup"
+        />
+        <meta name="og:image" content="url_to_your_logo_or_banner_image" />
+        <link
+          rel="canonical"
+          href="https://cloudinotebook.netlify.app/signup"
+        />
+      </Helmet>
+
       <div className="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
         <div
           className="card card0 border-0"
@@ -103,11 +135,7 @@ const Signup = (props) => {
                     </p>
                   </div>
                   <div className="row px-3 justify-content-center mt-4 mb-5 border-line">
-                    <img
-                      src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
-                      className="image"
-                      alt="logo"
-                    />
+                    <img src={logo} className="image" alt="logo" />
                   </div>
                 </div>
               </div>
@@ -215,7 +243,7 @@ const Signup = (props) => {
                       Sign Up
                     </button>
                   </div>
-                  <div className="row mb-4 px-1 ms-auto">
+                  <div className="row mb-4 px-1 me-auto">
                     <small className="font-weight-bold">
                       Don't have an account?{" "}
                       <NavLink to="/login" className="text-danger ">

@@ -4,6 +4,7 @@ import Noteitem from "./Noteitem";
 // import AddNote from "./AddNote";
 import { useNavigate } from "react-router";
 import { IoIosCloseCircleOutline } from "react-icons/io";
+import { Helmet } from "react-helmet";
 
 const DisNote = (props) => {
   const context = useContext(noteContext);
@@ -48,6 +49,37 @@ const DisNote = (props) => {
 
   return (
     <>
+      <Helmet>
+        <title>My Notes: iNoteBook</title>
+        <meta charSet="UTF-8" />
+        <meta
+          name="description"
+          content="Explore and manage your notes with iNoteBook - Your Secure Cloud Note-Taking App. View, edit, and organize your notes with ease. Secure and convenient note access from anywhere."
+        />
+        <meta
+          name="keywords"
+          content="iNoteBook, display notes, view notes, organize notes, secure note access, React, Bootstrap, CSS"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Your Name" />
+        <meta name="og:title" content="My Notes: iNoteBook" />
+        <meta
+          name="og:description"
+          content="Explore and manage your notes with iNoteBook - Your Secure Cloud Note-Taking App. View, edit, and organize your notes with ease. Secure and convenient note access from anywhere."
+        />
+        <meta name="og:type" content="website" />
+        <meta
+          name="og:url"
+          content="https://cloudinotebook.netlify.app/displaynotes"
+        />
+        <meta name="og:image" content="url_to_your_logo_or_banner_image" />
+        <link
+          rel="canonical"
+          href="https://cloudinotebook.netlify.app/displaynotes"
+        />
+      </Helmet>
+
       <button
         ref={ref}
         type="button"

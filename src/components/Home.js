@@ -2,10 +2,39 @@ import React from "react";
 import DisNote from "./DisNote";
 import { NavLink } from "react-router-dom";
 import logo from "./Imgs/homeImg.png";
+import { Helmet } from "react-helmet";
 
 const Home = (props) => {
   return (
     <>
+      <Helmet>
+        <title>iNoteBook - Secure Cloud Note-Taking App</title>
+        <meta charSet="UTF-8" />
+        <meta
+          name="description"
+          content="iNoteBook is a secure cloud-based note-taking app. Organize your notes with tags and access them from anywhere. Free and easy-to-use."
+        />
+        <meta
+          name="keywords"
+          content="iNoteBook, note-taking, cloud app, secure notes, React, Bootstrap, CSS"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Your Name" />
+        <meta
+          name="og:title"
+          content="iNoteBook - Secure Cloud Note-Taking App"
+        />
+        <meta
+          name="og:description"
+          content="iNoteBook is a secure cloud-based note-taking app. Organize your notes with tags and access them from anywhere. Free and easy-to-use."
+        />
+        <meta name="og:type" content="website" />
+        <meta name="og:url" content="https://cloudinotebook.netlify.app/" />
+        <meta name="og:image" content="url_to_your_logo_or_banner_image" />
+        <link rel="canonical" href="https://cloudinotebook.netlify.app/" />
+      </Helmet>
+
       <div className="container home">
         <div className="row py-5 mt-4 align-items-center">
           <div className="col-md-5 pr-lg-5 mb-3 mb-md-0">

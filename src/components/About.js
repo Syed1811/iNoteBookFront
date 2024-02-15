@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 const About = (props) => {
   return (
@@ -8,6 +9,34 @@ const About = (props) => {
         height: "65vh",
       }}
     >
+      <Helmet>
+        <title>About Us: iNoteBook</title>
+        <meta charSet="UTF-8" />
+        <meta
+          name="description"
+          content="Learn more about iNoteBook - Your Secure Cloud Note-Taking App. Discover the features, technology stack, and the team behind the development."
+        />
+        <meta
+          name="keywords"
+          content="iNoteBook, about us, team, technology stack, secure notes, React, Bootstrap, CSS"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Your Name" />
+        <meta name="og:title" content="About Us: iNoteBook" />
+        <meta
+          name="og:description"
+          content="Learn more about iNoteBook - Your Secure Cloud Note-Taking App. Discover the features, technology stack, and the team behind the development."
+        />
+        <meta name="og:type" content="website" />
+        <meta
+          name="og:url"
+          content="https://cloudinotebook.netlify.app/about"
+        />
+        <meta name="og:image" content="url_to_your_logo_or_banner_image" />
+        <link rel="canonical" href="https://cloudinotebook.netlify.app/about" />
+      </Helmet>
+
       <h1
         className="text-center my-5"
         style={{

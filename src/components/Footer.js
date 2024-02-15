@@ -14,6 +14,9 @@ export default function Footer(props) {
           backgroundColor: props.mode === "light" ? "#383737" : "#383737",
         }}
       >
+        <section className="col mt-3">
+          <span>Syed Raiyanullah</span>
+        </section>
         <section className="col">
           <MDBBtn
             rippleColor="dark"
@@ -21,7 +24,8 @@ export default function Footer(props) {
             floating
             size="lg"
             className="text-light m-1 "
-            href="#!"
+            href="https://www.facebook.com/raiyanullah.raiyanullah"
+            target="_blank"
             role="button"
           >
             <MDBIcon fab className="fab fa-facebook-f iconHover" />
@@ -33,7 +37,8 @@ export default function Footer(props) {
             floating
             size="lg"
             className="text-light m-1 "
-            href="#!"
+            href="https://twitter.com/Syed18112002"
+            target="_blank"
             role="button"
           >
             <MDBIcon fab className="fa-twitter iconHover" />
@@ -44,20 +49,9 @@ export default function Footer(props) {
             color="link"
             floating
             size="lg"
-            className="text-light m-1"
-            href="#!"
-            role="button"
-          >
-            <MDBIcon fab className="fa fa-envelope iconHover" />
-          </MDBBtn>
-
-          <MDBBtn
-            rippleColor="dark"
-            color="link"
-            floating
-            size="lg"
             className="text-light m-1 "
-            href="#!"
+            href="https://www.instagram.com/syedraiyanullah/?utm_source=qr"
+            target="_blank"
             role="button"
           >
             <MDBIcon fab className="fa-instagram iconHover" />
@@ -69,7 +63,8 @@ export default function Footer(props) {
             floating
             size="lg"
             className="text-light m-1 "
-            href="#!"
+            href="https://www.linkedin.com/in/syed1811"
+            target="_blank"
             role="button"
           >
             <MDBIcon fab className="fa-linkedin iconHover" />
@@ -81,14 +76,12 @@ export default function Footer(props) {
             floating
             size="lg"
             className="text-light m-1 "
-            href="#!"
+            href="https://github.com/Syed1811"
+            target="_blank"
             role="button"
           >
             <MDBIcon fab className="fa-github iconHover" />
           </MDBBtn>
-        </section>
-        <section className="col mt-3">
-          <span>© 2024 Copyright: All Right Reserved by Syed Raiyanullah</span>
         </section>
       </div>
     </MDBFooter>

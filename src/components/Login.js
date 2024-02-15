@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import { NavLink } from "react-router-dom";
+import logo from "./Imgs/loginImg.png";
+import { Helmet } from "react-helmet";
 
 const Login = (props) => {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
@@ -8,19 +10,16 @@ const Login = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(
-      "https://inotebookbackend-6med.onrender.com/api/auth/login",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: credentials.email,
-          password: credentials.password,
-        }),
-      }
-    );
+    const response = await fetch("http://localhost:5000/api/auth/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: credentials.email,
+        password: credentials.password,
+      }),
+    });
     const json = await response.json();
     console.log(json);
     if (json.success) {
@@ -40,6 +39,40 @@ const Login = (props) => {
   return (
     <>
       <div className="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
+        <Helmet>
+          <title>Login: iNoteBook</title>
+          <meta charSet="UTF-8" />
+          <meta
+            name="description"
+            content="Login to iNoteBook - Your Secure Cloud Note-Taking App. Access your notes securely and manage your account. Stay organized with easy login and note-taking features."
+          />
+          <meta
+            name="keywords"
+            content="iNoteBook, login, secure login, account management, note-taking, React, Bootstrap, CSS"
+          />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          <meta name="robots" content="index, follow" />
+          <meta name="author" content="Your Name" />
+          <meta name="og:title" content="Login to iNoteBook" />
+          <meta
+            name="og:description"
+            content="Login to iNoteBook - Your Secure Cloud Note-Taking App. Access your notes securely and manage your account. Stay organized with easy login and note-taking features."
+          />
+          <meta name="og:type" content="website" />
+          <meta
+            name="og:url"
+            content="https://cloudinotebook.netlify.app/login"
+          />
+          <meta name="og:image" content="url_to_your_logo_or_banner_image" />
+          <link
+            rel="canonical"
+            href="https://cloudinotebook.netlify.app/login"
+          />
+        </Helmet>
+
         <div
           className="card card0 border-0"
           style={{
@@ -71,11 +104,7 @@ const Login = (props) => {
                     </p>
                   </div>
                   <div className="row px-3 justify-content-center mt-4 mb-5 border-line">
-                    <img
-                      src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
-                      className="image"
-                      alt="logo"
-                    />
+                    <img src={logo} className="image" alt="logo" />
                   </div>
                 </div>
               </div>
@@ -129,7 +158,7 @@ const Login = (props) => {
                     />
                   </div>
                   <div class="d-flex justify-content-between align-items-center smrem mt-2 mb-1 px-1">
-                    <NavLink to="/forget" class="text-body ms-auto">
+                    <NavLink to="/#!" class="text-body ms-auto">
                       Forgot password?
                     </NavLink>
                   </div>
@@ -144,7 +173,7 @@ const Login = (props) => {
                       Login
                     </button>
                   </div>
-                  <div className="row mb-4 px-1 ms-auto">
+                  <div className="row mb-4 px-1 me-auto">
                     <small className="font-weight-bold">
                       Don't have an account?{" "}
                       <NavLink to="/signup" className="text-danger ">

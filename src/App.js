@@ -11,7 +11,6 @@ import Signup from "./components/Signup";
 import Login from "./components/Login";
 import Notes from "./components/Notes";
 import NotFound from "./components/NotFound";
-import Footer from "./components/Footer";
 
 function App() {
   const [alert, setAlert] = useState(null);

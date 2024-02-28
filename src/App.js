@@ -71,7 +71,6 @@ function App() {
               <Route exact path="/*" element={<NotFound />} />
             </Routes>
           </div>
-          <Footer mode={mode} />
         </Router>
       </NoteState>
     </>

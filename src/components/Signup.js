@@ -58,17 +58,18 @@ const Signup = (props) => {
   const checkCon = () => {
     const { password, cpassword } = credentials;
     const passwordsMatch = password === cpassword;
-    const uppercaseRegex = /[A-Z]/;
-    const lowercaseRegex = /[a-z]/;
-    const specialSymbolRegex = /[!@#$%^&*()_+{}:;<>,.?~`]/;
-    const numberRegex = /\d/;
-    const isComplexPassword =
-      uppercaseRegex.test(password) &&
-      lowercaseRegex.test(password) &&
-      specialSymbolRegex.test(password) &&
-      numberRegex.test(password);
+    // const uppercaseRegex = /[A-Z]/;
+    // const lowercaseRegex = /[a-z]/;
+    // const specialSymbolRegex = /[!@#$%^&*()_+{}:;<>,.?~`]/;
+    // const numberRegex = /\d/;
+    // const isComplexPassword =
+    //   uppercaseRegex.test(password) &&
+    //   lowercaseRegex.test(password) &&
+    //   specialSymbolRegex.test(password) &&
+    //   numberRegex.test(password);
 
-    setTorF(passwordsMatch && isComplexPassword);
+    // setTorF(passwordsMatch && isComplexPassword);
+    setTorF(passwordsMatch);
   };
 
   return (

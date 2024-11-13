@@ -10,7 +10,7 @@ const Signup = (props) => {
     password: "",
     cpassword: "",
   });
-  const [TorF, setTorF] = useState(false);
+
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -55,22 +55,6 @@ const Signup = (props) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
   };
 
-  const checkCon = () => {
-    const { password, cpassword } = credentials;
-    const passwordsMatch = password === cpassword;
-    // const uppercaseRegex = /[A-Z]/;
-    // const lowercaseRegex = /[a-z]/;
-    // const specialSymbolRegex = /[!@#$%^&*()_+{}:;<>,.?~`]/;
-    // const numberRegex = /\d/;
-    // const isComplexPassword =
-    //   uppercaseRegex.test(password) &&
-    //   lowercaseRegex.test(password) &&
-    //   specialSymbolRegex.test(password) &&
-    //   numberRegex.test(password);
-
-    // setTorF(passwordsMatch && isComplexPassword);
-    setTorF(passwordsMatch);
-  };
 
   return (
     <div

@@ -235,7 +235,7 @@ const Signup = (props) => {
                     <button
                       type="submit"
                       name="submitbtn"
-                      disabled={TorF}
+                      disabled={false}
                       className="btn btn-bluee text-center"
                       style={{
                         width: "100%",
